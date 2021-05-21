@@ -14,7 +14,6 @@
 		CABA9A1426572317001CA2FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CABA9A1326572317001CA2FB /* Assets.xcassets */; };
 		CABA9A1726572317001CA2FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CABA9A1626572317001CA2FB /* Preview Assets.xcassets */; };
 		CABA9A1A26572317001CA2FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABA9A1826572317001CA2FB /* LaunchScreen.storyboard */; };
-		CABA9A2226577369001CA2FB /* GetDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA9A2126577369001CA2FB /* GetDocuments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		CABA9A1626572317001CA2FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CABA9A1926572317001CA2FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CABA9A1B26572317001CA2FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CABA9A2126577369001CA2FB /* GetDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDocuments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +61,6 @@
 				CABA9A0A26572315001CA2FB /* AppDelegate.swift */,
 				CABA9A0C26572315001CA2FB /* SceneDelegate.swift */,
 				CABA9A0E26572315001CA2FB /* ContentView.swift */,
-				CABA9A2126577369001CA2FB /* GetDocuments.swift */,
 				CABA9A1326572317001CA2FB /* Assets.xcassets */,
 				CABA9A1826572317001CA2FB /* LaunchScreen.storyboard */,
 				CABA9A1B26572317001CA2FB /* Info.plist */,
@@ -151,7 +148,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CABA9A2226577369001CA2FB /* GetDocuments.swift in Sources */,
 				CABA9A0B26572315001CA2FB /* AppDelegate.swift in Sources */,
 				CABA9A1226572315001CA2FB /* BucketList.xcdatamodeld in Sources */,
 				CABA9A0D26572315001CA2FB /* SceneDelegate.swift in Sources */,
