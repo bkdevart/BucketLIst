@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA180DAB2657E09400872C60 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA180DAA2657E09400872C60 /* MapView.swift */; };
 		CABA9A0B26572315001CA2FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA9A0A26572315001CA2FB /* AppDelegate.swift */; };
 		CABA9A0D26572315001CA2FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA9A0C26572315001CA2FB /* SceneDelegate.swift */; };
 		CABA9A0F26572315001CA2FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA9A0E26572315001CA2FB /* ContentView.swift */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CA180DAA2657E09400872C60 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CABA9A0726572315001CA2FB /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABA9A0A26572315001CA2FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CABA9A0C26572315001CA2FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 				CABA9A0A26572315001CA2FB /* AppDelegate.swift */,
 				CABA9A0C26572315001CA2FB /* SceneDelegate.swift */,
 				CABA9A0E26572315001CA2FB /* ContentView.swift */,
-				CA180DAA2657E09400872C60 /* MapView.swift */,
 				CABA9A1326572317001CA2FB /* Assets.xcassets */,
 				CABA9A1826572317001CA2FB /* LaunchScreen.storyboard */,
 				CABA9A1B26572317001CA2FB /* Info.plist */,
@@ -153,7 +150,6 @@
 			files = (
 				CABA9A0B26572315001CA2FB /* AppDelegate.swift in Sources */,
 				CABA9A1226572315001CA2FB /* BucketList.xcdatamodeld in Sources */,
-				CA180DAB2657E09400872C60 /* MapView.swift in Sources */,
 				CABA9A0D26572315001CA2FB /* SceneDelegate.swift in Sources */,
 				CABA9A0F26572315001CA2FB /* ContentView.swift in Sources */,
 			);
