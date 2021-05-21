@@ -12,7 +12,14 @@ struct ContentView: View {
     @State private var isUnlocked = false
     
     var body: some View {
-        Text("Hello world")
+        VStack {
+            if self.isUnlocked {
+                Text("Unlocked")
+            } else {
+                Text("Locked")
+            }
+        }
+        .onAppear(perform: authenticate)
     }
     
     func authenticate() {
@@ -24,7 +31,7 @@ struct ContentView: View {
             
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in DispatchQueue.main.async {
                     if success {
-                        // authenticated successfully
+                        self.isUnlocked = true
                     } else {
                         // there was a problem
                     }
