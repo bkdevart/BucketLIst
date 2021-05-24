@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var centerCoordinate = CLLocationCoordinate2D()
-    @State private var locations = [MKPointAnnotation]()
+    @State private var locations = [CodableMKPointAnnotation]()
     @State private var selectedPlace: MKPointAnnotation?
     @State private var showingPlaceDetails = false
     @State private var showingEditScreen = false
@@ -29,7 +29,7 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     Button(action : {
-                        let newLocation = MKPointAnnotation()
+                        let newLocation = CodableMKPointAnnotation()
                         newLocation.title = "Example Location"
                         newLocation.coordinate = self.centerCoordinate
                         self.locations.append(newLocation)
