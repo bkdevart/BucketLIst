@@ -10,6 +10,7 @@
 		CA7F8B60265B581A00A456EF /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7F8B5F265B581A00A456EF /* MKPointAnnotation-ObservableObject.swift */; };
 		CA7F8B62265B589800A456EF /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7F8B61265B589800A456EF /* EditView.swift */; };
 		CA7F8B64265B5B9B00A456EF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7F8B63265B5B9B00A456EF /* Result.swift */; };
+		CA7F8B66265C281400A456EF /* MKPointAnnotation-Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7F8B65265C281400A456EF /* MKPointAnnotation-Codable.swift */; };
 		CAA984502659A0D900F8B669 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9844F2659A0D900F8B669 /* MapView.swift */; };
 		CABA9A0B26572315001CA2FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA9A0A26572315001CA2FB /* AppDelegate.swift */; };
 		CABA9A0D26572315001CA2FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA9A0C26572315001CA2FB /* SceneDelegate.swift */; };
@@ -24,6 +25,7 @@
 		CA7F8B5F265B581A00A456EF /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
 		CA7F8B61265B589800A456EF /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		CA7F8B63265B5B9B00A456EF /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		CA7F8B65265C281400A456EF /* MKPointAnnotation-Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-Codable.swift"; sourceTree = "<group>"; };
 		CAA9844F2659A0D900F8B669 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CABA9A0726572315001CA2FB /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABA9A0A26572315001CA2FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				CA7F8B63265B5B9B00A456EF /* Result.swift */,
 				CA7F8B5F265B581A00A456EF /* MKPointAnnotation-ObservableObject.swift */,
 				CA7F8B61265B589800A456EF /* EditView.swift */,
+				CA7F8B65265C281400A456EF /* MKPointAnnotation-Codable.swift */,
 				CAA9844F2659A0D900F8B669 /* MapView.swift */,
 				CABA9A1326572317001CA2FB /* Assets.xcassets */,
 				CABA9A1826572317001CA2FB /* LaunchScreen.storyboard */,
@@ -166,6 +169,7 @@
 				CAA984502659A0D900F8B669 /* MapView.swift in Sources */,
 				CA7F8B62265B589800A456EF /* EditView.swift in Sources */,
 				CABA9A0D26572315001CA2FB /* SceneDelegate.swift in Sources */,
+				CA7F8B66265C281400A456EF /* MKPointAnnotation-Codable.swift in Sources */,
 				CA7F8B64265B5B9B00A456EF /* Result.swift in Sources */,
 				CABA9A0F26572315001CA2FB /* ContentView.swift in Sources */,
 			);
