@@ -20,37 +20,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             if isUnlocked {
-                MapView(centerCoordinate: $centerCoordinate, selectedPlace: $selectedPlace, showingPlaceDetails: $showingPlaceDetails, annotations: locations)
-                    .edgesIgnoringSafeArea(.all)
-                Circle()
-                    .fill(Color.blue)
-                    .opacity(0.3)
-                    .frame(width: 32, height: 32)
-                
-                VStack {
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        // Our + button is rather hard to tap. Try moving all its modifiers to the image inside the button – what difference does it make, and can you think why?
-                        Button(action : {
-                            let newLocation = CodableMKPointAnnotation()
-                            newLocation.title = "Example Location"
-                            newLocation.coordinate = self.centerCoordinate
-                            self.locations.append(newLocation)
-                            
-                            self.selectedPlace = newLocation
-                            self.showingEditScreen = true
-                        }) {
-                            Image(systemName: "plus")
-                                .padding()
-                                .background(Color.black.opacity(0.75))
-                                .foregroundColor(.white)
-                                .font(.title)
-                                .clipShape(Circle())
-                                .padding(.trailing)
-                        }
-                    }
-                }
+                UnlockedView(centerCoordinate: self.$centerCoordinate, locations: self.$locations, selectedPlace: self.$selectedPlace, showingPlaceDetails: self.$showingPlaceDetails, showingEditScreen: self.$showingEditScreen)
             } else {
                 Button("Unlock Places") {
                     self.authenticate()
