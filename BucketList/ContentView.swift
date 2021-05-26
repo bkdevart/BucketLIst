@@ -16,11 +16,17 @@ struct ContentView: View {
     @State private var showingPlaceDetails = false
     @State private var showingEditScreen = false
     @State private var isUnlocked = false
+    @State private var authError = false
+    @State private var authErrorMessage = ""
     
     var body: some View {
         ZStack {
             if isUnlocked {
-                UnlockedView(centerCoordinate: self.$centerCoordinate, locations: self.$locations, selectedPlace: self.$selectedPlace, showingPlaceDetails: self.$showingPlaceDetails, showingEditScreen: self.$showingEditScreen)
+                UnlockedView(centerCoordinate: $centerCoordinate,
+                             locations: $locations,
+                             selectedPlace: $selectedPlace,
+                             showingPlaceDetails: $showingPlaceDetails,
+                             showingEditScreen: $showingEditScreen)
             } else {
                 Button("Unlock Places") {
                     self.authenticate()
@@ -29,12 +35,12 @@ struct ContentView: View {
                 .background(Color.blue)
                 .foregroundColor(.white)
                 .clipShape(Capsule())
+                .alert(isPresented: $authError) {
+                    Alert(title: Text("Authentication Error"),
+                          message: Text(authErrorMessage),
+                          dismissButton: .default(Text("OK")))
+                }
             }
-        }
-        .alert(isPresented: $showingPlaceDetails) {
-            Alert(title: Text(selectedPlace?.title ?? "Unknown"), message: Text(selectedPlace?.subtitle ?? "Missing place information."), primaryButton: .default(Text("OK")), secondaryButton: .default(Text("Edit")) {
-                self.showingEditScreen = true
-            })
         }
         .sheet(isPresented: $showingEditScreen, onDismiss: saveData) {
             if self.selectedPlace != nil {
@@ -82,11 +88,15 @@ struct ContentView: View {
                         self.isUnlocked = true
                     } else {
                         // error
+                        authError = true
+                        authErrorMessage = "Unrecognizable face or fingerprint"
                     }
                 }
             }
         } else {
             // no biometry
+            authError = true
+            authErrorMessage = "Face ID and Touch ID are not supported on this device"
         }
     }
 }

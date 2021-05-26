@@ -9,8 +9,6 @@ import MapKit
 import SwiftUI
 
 struct UnlockedView: View {
-    // TODO turn these to bindings? @Binding var isPresented: Bool
-    
     @Binding var centerCoordinate: CLLocationCoordinate2D
     @Binding var locations: [CodableMKPointAnnotation]
     @Binding var selectedPlace: MKPointAnnotation?
@@ -18,7 +16,6 @@ struct UnlockedView: View {
     @Binding var showingEditScreen: Bool
     
     var body: some View {
-        // Having a complex if condition in the middle of ContentView isn’t easy to read – can you rewrite it so that the MapView, Circle, and Button are part of their own view? This might take more work than you think!
         ZStack {
             MapView(centerCoordinate: $centerCoordinate, selectedPlace: $selectedPlace, showingPlaceDetails: $showingPlaceDetails, annotations: locations)
                 .edgesIgnoringSafeArea(.all)
@@ -50,29 +47,12 @@ struct UnlockedView: View {
                     }
                 }
             }
+            .alert(isPresented: $showingPlaceDetails) {
+                Alert(title: Text(selectedPlace?.title ?? "Unknown"),
+                      message: Text(selectedPlace?.subtitle ?? "Missing place information."),
+                      primaryButton: .default(Text("OK")),
+                      secondaryButton: .default(Text("Edit")) { self.showingEditScreen = true })
+            }
         }
     }
-    
-//    init(mission: Mission, astronauts: [Astronaut]) {
-//        self.mission = mission
-//
-//        var matches = [CrewMember]()
-//
-//        for member in mission.crew {
-//            if let match = astronauts.first(where: { $0.id == member.name}) {
-//                matches.append(CrewMember(role: member.role, astronaut: match))
-//            } else {
-//                fatalError("Missing \(member)")
-//            }
-//        }
-//
-//        self.astronauts = matches
-//    }
-    
 }
-
-//struct UnlockedView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        UnlockedView()
-//    }
-//}
